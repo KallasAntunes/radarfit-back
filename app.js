@@ -19,10 +19,9 @@ app.use(function (err, req, res, next) {
   res.status(422).send({ error: err.message });
 });
 
-// Ligar á B.D.: 'test'->user da BD, ´nnn´->pass
-mongoose.connect('mongodb://127.0.0.1/radarfit', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://kallaslimaantunes:NIQYI8gDUEwGpXDe@cluster0.xayk4jk.mongodb.net/?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
-// Confirma ligação na consola
+// Confirma ligação no console
 mongoose.connection.on('connected', function () {
   console.log('Connected to Database');
 });
